@@ -1,0 +1,10 @@
+model_options:
+  test_size: 0.3
+  random_state: 8
+  features: content
+  model_name: bert-base-uncased
+  num_labels: 2
+  epochs: 1              # Just one epoch for speed
+  batch_size: 64         # Larger batch for faster CPU training
+  lr: 5e-5
+  max_length: 256        # Reduce sequence length to speed up tokenization and processing

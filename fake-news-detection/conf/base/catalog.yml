@@ -1,0 +1,142 @@
+ali_raza_fake:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/ali_raza_fake.csv
+
+ali_raza_true:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/ali_raza_true.csv
+
+staging_ali_raza_fake:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/staging_ali_raza_fake.parquet
+
+staging_ali_raza_true:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/staging_ali_raza_true.parquet
+
+ali_raza:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/ali_raza.parquet
+
+bhavik_jikadara_fake:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/bhavik_jikadara_fake.csv
+
+bhavik_jikadara_true:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/bhavik_jikadara_true.csv
+
+staging_bhavik_jikadara_fake:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/staging_bhavik_jikadara_fake.parquet
+
+staging_bhavik_jikadara_true:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/staging_bhavik_jikadara_true.parquet
+
+bhavik_jikadara:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/bhavik_jikadara.parquet
+
+# Namespaced Nodes
+ali_raza.staging_fake:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/ns_staging_ali_raza_fake.parquet
+
+ali_raza.staging_true:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/ns_staging_ali_raza_true.parquet
+
+ali_raza.news_data:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/ns_ali_raza.parquet
+
+bhavik_jikadara.staging_fake:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/ns_staging_bhavik_jikadara_fake.parquet
+
+bhavik_jikadara.staging_true:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/ns_staging_bhavik_jikadara_true.parquet
+
+bhavik_jikadara.news_data:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/ns_bhavik_jikadara.parquet
+
+# Onion
+the_onion:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/the_onion.csv
+
+r_not_the_onion:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/r_not_the_onion.csv
+
+raw_r_not_the_onion_with_text:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/raw_r_not_the_onion_with_text.parquet
+
+renamed_onion:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/renamed_the_onion.parquet
+
+renamed_r_not_the_onion:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/renamed_r_not_the_onion.parquet
+
+staging_fake:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/staging_fake.parquet
+
+staging_true:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/staging_true.parquet
+
+news_data:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/news_data.parquet
+
+# Data Science
+#train_texts:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/train_texts.parquet
+#
+#val_texts:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/val_texts.parquet
+#
+#train_labels:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/train_labels.parquet
+#
+#val_labels:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/val_labels.parquet
+#
+#train_encodings:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/train_encodings.parquet
+#
+#val_encodings:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/val_encodings.parquet
+
+#train_dataset:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/train_dataset.parquet
+#
+#val_dataset:
+#  type: pandas.ParquetDataset
+#  filepath: data/05_model_input/val_dataset.parquet
+
+#tokenizer:
+#  type: pandas.ParquetDataset
+#  filepath: data/06_models/tokenizer.parquet
+
+predictions:
+  type: pandas.ParquetDataset
+  filepath: data/07_model_output/predictions.parquet
+
+evaluation_report:
+  type:  pandas.ParquetDataset
+  filepath: data/08_reporting/evaluation_report.parquet

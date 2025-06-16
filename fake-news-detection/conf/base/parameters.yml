@@ -1,0 +1,12 @@
+flag_fake: 1
+flag_true: 0
+
+onion_column_mapping:
+  title: 'Title'
+  text: 'Content'
+  date: 'Published Time'
+
+r_not_the_onion_mapping:
+  title: 'title'
+  text: 'body'
+  date: 'timestamp'
