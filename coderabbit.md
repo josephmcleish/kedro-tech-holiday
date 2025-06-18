@@ -14,10 +14,9 @@ tags:
 
 ## Summary of Findings
 
-CodeRabbit is an incredibly useful AI review tool that almost all projects should seriously consider using in some form.
-It integrates with a variety of Git clients (as well as local IDEs like VS Code) to provide a first review pass and
-improve PR descriptions. This should not be used as a sole reviewer on any PR and instead should augment existing
-reviews, meaning:
+CodeRabbit is a useful AI review tool that Bluesmith projects should consider using in some form. It integrates with a
+variety of Git clients (as well as local IDEs like VS Code) to provide a first review pass and improve PR descriptions.
+This should not be used as a sole reviewer on any PR and instead should augment existing reviews, meaning:
 
 - Fewer issues are missed in review.
 - Changes are better documented with added explanations, breaking down the PR file-by-file and adding diagrams when
@@ -25,15 +24,15 @@ reviews, meaning:
 - The first chunk of review comments are already spotted in minutes by CodeRabbit, saving review time and making PRs
   both better quality by the time they reach peer review and easier to review because of the added explanations.
 
-The AI bot is configurable, can save learnings to apply to future reviews and can participate in back-and-forth
+The AI bot is configurable, can save learnings to apply to future reviews, and can participate in back-and-forth
 discussions with users. The company takes data security seriously:
 
 - [All queries to LLMs existing in-memory only and zero retention after each query][data-privacy-and-security]
 - [No code used for training unless the repository is public][data-security]
 - [All data collection and storage practices comply with both SOC 2 and GDPR][trust-coderabbit-ai]
 
-There are a [few different pricing options available][pricing], though it's worth noting that reviews in IDEs don't seem
-to be quite as detailed as those in PRs (at least from my limited testing).
+There are a [few different pricing options available][pricing], though it's worth noting that reviews in IDEs aren't as
+detailed as those in PRs (at least from my limited testing).
 
 ## Setting Up
 
@@ -137,7 +136,7 @@ which claims to _"Suggest reviewers based on the changes in the pull request in 
 Towards the end of my testing, [functionality for role-based access control was released by
 CodeRabbit][role-based-access-control] which means settings such as CodeRabbit configuration can be limited to specific
 individuals. I tested this with Richard Thio to see if the `.coderabbit.yaml` file could be used as a back door for
-changing the config, which it is. In the portal for CodeRabbit, I verified that Richard was set the role of Member:
+changing the config, which it is. In the portal for CodeRabbit, I verified that Richard was assigned the Member role:
 
 ![CodeRabbit Subscription View Of Role-Based Access Control](.attachments/CodeRabbitSubscriptionRBAC.png)
 
@@ -162,8 +161,8 @@ Therefore, it's difficult to establish whether this is a back door or not.
 
 ### Using CodeRabbit in Azure DevOps
 
-In Azure DevOps CodeRabbit needs a DevOps account to use, which costs more money. For the purposes of testing, I used my
-own account, which causes an interesting message when the agent sees the code as being written by itself:
+In Azure DevOps, CodeRabbit needs a DevOps account to use, which costs more money. For the purposes of testing, I used
+my own account, which causes an interesting message when the agent sees the code as being written by itself:
 
 ![CodeRabbit DevOps Review Skipped](.attachments/CodeRabbitDevOpsReviewSkipped.png)
 
@@ -207,7 +206,7 @@ _"No issues detected in this review. You're good to go!"_):
 ![CodeRabbit VS Code Missed Errors](.attachments/CodeRabbitVSCodeMissedErrors.png)
 
 The extension doesn't need to be using code that the account is linked to. It intelligently finds out the branch and
-diff from main and then reviews the changed files. These review comments aren't always about syntax/code either:
+diff from main and then reviews the changed files. These review comments aren't always about syntax/code, either:
 
 ![CodeRabbit VS Code Markdown Comment](.attachments/CodeRabbitVSCodeMarkdownComment.png)
 
